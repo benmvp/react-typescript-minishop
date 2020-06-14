@@ -1,18 +1,49 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useReducer } from 'react'
 
 type Direction = 'right' | 'left'
+interface AppState {
+  x: number
+  dir: Direction
+  offsetLeft: number
+}
+type Action =
+  | { type: 'move-x' }
+  | { type: 'toggle-dir' }
+  | { type: 'set-offsetLeft'; pos: number }
+
+const reducer = (state: AppState, action: Action): AppState => {
+  switch (action.type) {
+    case 'move-x': {
+      return {
+        ...state,
+        x: state.x + (state.dir === 'right' ? 5 : -5),
+      }
+    }
+    case 'toggle-dir': {
+      return {
+        ...state,
+        dir: state.dir === 'right' ? 'left' : 'right',
+      }
+    }
+    case 'set-offsetLeft': {
+      return {
+        ...state,
+        offsetLeft: action.pos,
+      }
+    }
+    default: {
+      throw new Error()
+    }
+  }
+}
 
 const App = () => {
-  // Pass a callback to `useState` so that the retrieval from `localStorage`
-  // only happens on initial render. The type of `x` is determined by what's
-  // returned by the callback.
-  // https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
-  const [x, setX] = useState(() =>
-    parseInt(window.localStorage.getItem('x') || '50'),
-  )
-  const [dir, setDir] = useState<Direction>(
-    (window.localStorage.getItem('dir') || 'right') as Direction,
-  )
+  const [state, dispatch] = useReducer(reducer, {
+    x: parseInt(window.localStorage.getItem('x') || '50'),
+    dir: (window.localStorage.getItem('dir') || 'right') as Direction,
+    offsetLeft: 0,
+  })
+  const { x, dir, offsetLeft } = state
 
   useEffect(() => {
     window.localStorage.setItem('x', x.toString())
@@ -21,12 +52,11 @@ const App = () => {
     window.localStorage.setItem('dir', dir)
   }, [dir])
 
-  const [offsetLeft, setOffsetLeft] = useState(0)
   const imageRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
     if (imageRef.current?.offsetLeft) {
-      setOffsetLeft(imageRef.current?.offsetLeft)
+      dispatch({ type: 'set-offsetLeft', pos: imageRef.current?.offsetLeft })
     }
   }, [imageRef, x])
 
@@ -46,7 +76,7 @@ const App = () => {
         <button
           className="button success"
           onClick={() => {
-            setDir((prevDir) => (prevDir === 'right' ? 'left' : 'right'))
+            dispatch({ type: 'toggle-dir' })
           }}
         >
           {dir}
@@ -66,7 +96,7 @@ const App = () => {
           cursor: 'pointer',
         }}
         onClick={() => {
-          setX((prevX) => prevX + (dir === 'right' ? 5 : -5))
+          dispatch({ type: 'move-x' })
         }}
       />
     </main>

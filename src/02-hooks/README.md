@@ -213,7 +213,13 @@ Create a ref using `useRef` for the `<image>` element. Use `useEffect` to retrie
 
 ## 🤓 Bonus!
 
-### 1. `useReducer`
+### 1. Optimized `useState`
+
+Although `useState` only uses the initial value once when it creates the state variable, the initial value _itself_ is calculated on every render. This means that we're calling `parseInt(window.localStorage.getItem('x') || '50')` on every render. We're reading from `localStorage` unnecessarily, creating a potential performance bottleneck.
+
+Using [lazy state initialization](https://reactjs.org/docs/hooks-reference.html#lazy-initial-state), only read from `localStorage` during the intial render.
+
+### 2. `useReducer`
 
 Convert the individual `x`, `dir` & `offsetLeft` state variables into a combined state using `useReducer`. Replace the individual calls to update the state variables, with dispatches on the reducer.
 
