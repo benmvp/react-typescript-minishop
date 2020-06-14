@@ -52,7 +52,7 @@ The `AppProps` `interface` is where props are defined using TypeScript types:
 #### `prop-types`
 
 ```
-style: PropTypes.exact({
+style: PropTypes.shape({
   color: PropTypes.string,
   fontSize: PropTypes.number
 })

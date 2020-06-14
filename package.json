@@ -9,7 +9,7 @@
     "test:coverage": "npm run test -- --watchAll=false",
     "lint": "eslint src --ext .js,.ts,.tsx",
     "type": "tsc --project . --noEmit",
-    "validate": "npm-run-all --parallel lint type test:coverage build",
+    "validate": "npm-run-all --parallel lint type build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
