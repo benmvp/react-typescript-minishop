@@ -4,4 +4,4 @@
 
 ## 👉🏾 Next Step
 
-Go to [Step 1 - Props](../02-props).
+Go to [Step 1 - Props](../01-props).

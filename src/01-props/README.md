@@ -42,7 +42,7 @@ The `AppProps` `interface` is where props are defined using TypeScript types:
 | `message: PropTypes.string`                              | `message: string`                 |
 | `count: PropTypes.number`                                | `count: number`                   |
 | `disabled: PropTypes.bool`                               | `disabled: boolean`               |
-| `status: PropTypes.oneOf(['success', 'failed'])`         | `status: 'success' | 'failed'`    |
+| `status: PropTypes.oneOf(['success', 'failed'])`         | `status: 'success' \| 'failed'`   |
 | `children: PropTypes.node`                               | `children: React.ReactNode`       |
 | `onClick: PropTypes.func`                                | `onClick: () => void`             |
 | `onChange: PropTypes.func`                               | `onChange: (val: string) => void` |
@@ -95,10 +95,10 @@ items: {
 
 Properties of TypeScript interfaces are **required by default** which is opposite of `prop-types` which is optional by default.
 
-| `prop-types`                            | TypeScript          |
-| --------------------------------------- | ------------------- |
-| `required: PropTypes.string.isRequired` | `required: string`  |
-| `optional: PropTypes.boolean`           | `optional: boolean` |
+| `prop-types`                            | TypeScript           |
+| --------------------------------------- | -------------------- |
+| `required: PropTypes.string.isRequired` | `required: string`   |
+| `optional: PropTypes.bool`              | `optional?: boolean` |
 
 Use destructuring with defaulting to simulate `defaultProps` for optional parameters:
 
