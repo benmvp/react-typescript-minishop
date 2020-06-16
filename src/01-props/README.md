@@ -183,6 +183,7 @@ Go to [Step 2 - Hooks](../02-hooks).
 - [Basic TypeScript Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 - [TypeScript Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
 - [TypeScript Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+- [React Prop Types with TypeScript](https://www.benmvp.com/blog/react-prop-types-with-typescript/)
 - [React-specific TypeScript types](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/react_prop_type_example)
 
 ## ❓ Questions
