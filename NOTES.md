@@ -21,3 +21,8 @@
 - typing response from APIs
 - typing utility functions
 - typing custom hooks
+
+## Quiz
+
+- Add filters for page size + rating
+- Display title (w/ link), rating

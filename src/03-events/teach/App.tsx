@@ -27,7 +27,6 @@ const Form = ({
         <input
           type="text"
           value={name}
-          // is this ok?
           onChange={(e) => setName(e.target.value)}
         />
       </label>

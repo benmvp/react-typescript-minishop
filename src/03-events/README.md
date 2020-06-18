@@ -117,7 +117,7 @@ const App = () => {
 }
 ```
 
-[Contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing) comes in handy in many other cases, especially function callbacks passed to Array iteration methods like `.map()`:
+Contextual typing comes in handy in many other cases, especially function callbacks passed to Array iteration methods like `.map()`:
 
 ```ts
 interface ResultsProps {
