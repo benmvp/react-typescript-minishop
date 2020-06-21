@@ -136,6 +136,8 @@ const App = (props: Props): JSX.Element => {
 
 Rename [`App.js`](./App.js) into `App.tsx`, converting the `propTypes` and `defaultProps` into TypeScript `interface` definitions.
 
+(If you run into trouble with the exercises, you can take a peek at the final [source code](./final/App.tsx).)
+
 ## 🤓 Bonus!
 
 ### 1. DRY up the types

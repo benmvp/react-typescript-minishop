@@ -4,6 +4,21 @@ When dealing with events, whether those defined by form elements or those define
 
 🏅 The goal of this step is to learn how to properly annotate callback functions and rely on type inference as much as possible.
 
+<details>
+  <summary><b>Help! I didn't finish the previous step! 🚨</b></summary>
+
+If you didn't successfully complete the previous step, that's okay! The steps are meant to push you. 😄
+
+However, you may find yourself in a position where you app is not compiling because of TypeScript errors, and it's preventing you from working on the next step. No problem! Stash your changes **in a new terminal window**, and you should be good to continue:
+
+```sh
+git stash push -m "In-progress Step 2 exercises"
+```
+
+Your app should automatically reset and you should be able to continue on with the current step.
+
+</details>
+
 ## 🐇 Jump Around
 
 [Concepts](#-concepts) | [Learn](#-learn) | [Exercises](#-exercises) | [Elaboration & Feedback](#-elaboration--feedback) | [Resources](#-resources)
@@ -150,11 +165,15 @@ const Results = ({ items }: ResultsProps) => {
 
 ## 💡 Exercises
 
+Display the results of the submitted `<SearchForm />`:
+
 - Add `onChange` handlers to the search query field and the number of results drop down to call their respective state setters
 - Map over the values in `NUM_RESULTS_TIERS` to generate `<option>` elements within the results `<select>`
 - Define the `onSubmit` prop in `SearchFormProps` and use them to define the props for `SearchForm`
 - Call the `onSubmit` prop with `query` & `numResults` when the form is submitted
 - In `App`, call `setFields` with the submitted data, adding in `lastSubmitted: Date.now()`
+
+(If you run into trouble with the exercises, you can take a peek at the final [source code](./final/App.tsx).)
 
 ## 🤓 Bonus!
 
@@ -195,7 +214,7 @@ const RATING_FILTERS = [
 
 ## 🧠 Elaboration & Feedback
 
-After you're done with the exercise and before jumping to the next step, please fill out the [elaboration & feedback form](https://docs.google.com/forms/d/e/1FAIpQLScRocWvtbrl4XmT5_NRiE8bSK3CMZil-ZQByBAt8lpsurcRmw/viewform?usp=pp_url&entry.1671251225=TypeScript+For+React+Developers+Minishop&entry.1984987236=Step+3+-+Events+%26+Callbacks). It will help seal in what you've learned.
+After you're done with the exercise and before jumping to the next step, please fill out the [elaboration & feedback form](https://docs.google.com/forms/d/e/1FAIpQLScRocWvtbrl4XmT5_NRiE8bSK3CMZil-ZQByBAt8lpsurcRmw/viewform?usp=pp_url&entry.1671251225=TypeScript+For+React+Developers+Minishop&entry.1984987236=Step+3+-+Events+/+Callbacks). It will help seal in what you've learned.
 
 ## 👉🏾 Next Step
 
