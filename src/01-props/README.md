@@ -185,6 +185,7 @@ Go to [Step 2 - Hooks](../02-hooks).
 - [TypeScript Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
 - [React Prop Types with TypeScript](https://www.benmvp.com/blog/react-prop-types-with-typescript/)
 - [React-specific TypeScript types](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/react_prop_type_example)
+- [`react/prop-types` ESLint rule](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md)
 
 ## ❓ Questions
 
