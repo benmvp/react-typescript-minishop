@@ -4,11 +4,13 @@ const NUM_RESULTS_TIERS = [6, 12, 18, 24, 30]
 
 interface SearchFormProps {
   // 👈🏾 define `onSubmit` function prop properly
+  // it takes an object w/ `query` & `numResults` properties
 }
 
 const SearchForm = () => {
-  const [query, setQuery] = useState('')
-  const [numResults, setNumResults] = useState(NUM_RESULTS_TIERS[1])
+  // 👇🏾 Uncomment `setQuery` & `setNumResults` below
+  const [query /*, setQuery*/] = useState('')
+  const [numResults /*, setNumResults*/] = useState(NUM_RESULTS_TIERS[1])
 
   // 👇🏾 on form submit, pass `query` & `numResults` to `onSubmit` prop
 
@@ -43,7 +45,8 @@ const SearchForm = () => {
 }
 
 const App = () => {
-  const [fields, setFields] = useState({
+  // 👇🏾 Uncomment `setFields` below
+  const [fields /*, setFields*/] = useState({
     query: '',
     numResults: NUM_RESULTS_TIERS[1],
     lastSubmitted: -1,
