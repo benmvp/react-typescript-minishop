@@ -22,18 +22,18 @@ TypeScript React component files look and act very much like traditional JavaScr
 React function components are _functions_ that accept a single object parameter (aka "props") and return JSX. As a result, they can be typed in TypeScript just like any other function in TypeScript:
 
 ```ts
-interface AppProps {
+interface Props {
   // prop definitions
 }
 
-const App = (props: AppProps) => {
+const App = (props: Props) => {
   // component logic
 
   return <div>{/* UI stuff */}</div>
 }
 ```
 
-The `AppProps` `interface` is where props are defined using TypeScript types:
+The `Props` `interface` is where props are defined using TypeScript types:
 
 ### Basic Types
 
@@ -103,7 +103,7 @@ Properties of TypeScript interfaces are **required by default** which is opposit
 Use destructuring with defaulting to simulate `defaultProps` for optional parameters:
 
 ```ts
-interface AppProps {
+interface Props {
   children: React.ReactNode
   count: number
   disabled?: boolean
@@ -115,7 +115,7 @@ const App = ({
   count,
   disabled = false,
   variant = 'dark',
-}: AppProps) => {
+}: Props) => {
   // component logic
 
   return <div>{/* UI stuff */}</div>
@@ -125,7 +125,7 @@ const App = ({
 TypeScript functions can also define their return type, but usually it can be inferred by the type of the `return` statement. The type of returned JSX is `JSX.Element`:
 
 ```ts
-const App = (props: AppProps): JSX.Element => {
+const App = (props: Props): JSX.Element => {
   // component logic
 
   return <div>{/* UI stuff */}</div>
@@ -134,7 +134,7 @@ const App = (props: AppProps): JSX.Element => {
 
 ## 💡 Exercises
 
-Rename [`App.js`](./App.js) into `App.tsx`, converting the `propTypes` and `defaultProps` into TypeScript `interface`s.
+Rename [`App.js`](./App.js) into `App.tsx`, converting the `propTypes` and `defaultProps` into TypeScript `interface` definitions.
 
 ## 🤓 Bonus!
 

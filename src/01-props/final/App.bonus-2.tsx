@@ -70,13 +70,19 @@ interface Props {
   value?: number | string | Error
   children: React.ReactNode
 }
-const App = ({ numItems = 10 }: Props) => {
+const App = ({ numItems = 10, children, error, value }: Props) => {
   const items = ITEMS.slice(0, numItems)
+
+  if (error) {
+    return null
+  }
 
   return (
     <main>
       <h1>Giphy!</h1>
 
+      {value}
+      {children}
       <Results items={items} />
     </main>
   )

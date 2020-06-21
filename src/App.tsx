@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import Step1 from './01-props/App'
+import Step1Teach from './01-props/teach/App'
 import Step1Final from './01-props/final/App'
 import Step1FinalBonus1 from './01-props/final/App.bonus-1'
 import Step1FinalBonus2 from './01-props/final/App.bonus-2'
@@ -43,6 +44,9 @@ const Index = () => (
             </li>
             <li>
               <Link to="/step-1/final/bonus-2">Final (Bonus #2)</Link>
+            </li>
+            <li>
+              <Link to="/step-1/teach">Teach</Link>
             </li>
           </ul>
         </li>
@@ -125,6 +129,9 @@ const App = () => (
       </Route>
       <Route path="/step-1/final">
         <Step1Final />
+      </Route>
+      <Route path="/step-1/teach">
+        <Step1Teach />
       </Route>
       <Route path="/step-1">
         <Step1 />
