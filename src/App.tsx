@@ -28,10 +28,15 @@ import Step4FinalBonus2 from './04-api/final/App.bonus-2'
 const Index = () => (
   <main>
     <h1>TypeScript for React Developers Minishop</h1>
-    <nav style={{ marginTop: '2rem' }}>
-      <ul className="vertical menu">
+    <nav
+      style={{
+        marginTop: '2rem',
+        display: 'flex',
+      }}
+    >
+      <ul className="vertical menu" style={{ flex: 1 }}>
         <li>
-          <span>Step 1 - Props</span>
+          <h4>Step 1 - Props</h4>
           <ul className="nested vertical menu">
             <li>
               <Link to="/step-1">Exercises</Link>
@@ -52,7 +57,30 @@ const Index = () => (
         </li>
 
         <li>
-          <span>Step 2 - Hooks</span>
+          <h4>Step 3 - Events &amp; Callbacks</h4>
+          <ul className="nested vertical menu">
+            <li>
+              <Link to="/step-3">Exercises</Link>
+            </li>
+            <li>
+              <Link to="/step-3/final">Final</Link>
+            </li>
+            <li>
+              <Link to="/step-3/final/bonus-1">Final (Bonus #1)</Link>
+            </li>
+            <li>
+              <Link to="/step-3/final/bonus-2">Final (Bonus #2)</Link>
+            </li>
+            <li>
+              <Link to="/step-3/teach">Teach</Link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul className="vertical menu" style={{ flex: 1 }}>
+        <li>
+          <h4>Step 2 - Hooks</h4>
           <ul className="nested vertical menu">
             <li>
               <Link to="/step-2">Exercises</Link>
@@ -73,28 +101,7 @@ const Index = () => (
         </li>
 
         <li>
-          <span>Step 3 - Events &amp; Callbacks</span>
-          <ul className="nested vertical menu">
-            <li>
-              <Link to="/step-3">Exercises</Link>
-            </li>
-            <li>
-              <Link to="/step-3/final">Final</Link>
-            </li>
-            <li>
-              <Link to="/step-3/final/bonus-1">Final (Bonus #1)</Link>
-            </li>
-            <li>
-              <Link to="/step-3/final/bonus-2">Final (Bonus #2)</Link>
-            </li>
-            <li>
-              <Link to="/step-3/teach">Teach</Link>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <span>Step 4 - APIs &amp; Utilities</span>
+          <h4>Step 4 - APIs &amp; Utilities</h4>
           <ul className="nested vertical menu">
             <li>
               <Link to="/step-4">Exercises</Link>
