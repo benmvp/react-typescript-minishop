@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const NUM_RESULTS_TIERS = [6, 12, 18, 24, 30]
 
 interface SearchFormProps {
-  // 👇🏾 define `onSubmit` function prop properly
+  // 👈🏾 define `onSubmit` function prop properly
 }
 
 const SearchForm = () => {
@@ -19,7 +19,7 @@ const SearchForm = () => {
         <input
           type="search"
           value={query}
-          // 👇🏾 call setQuery with changed value
+          // 👈🏾 call setQuery with changed value
         />
       </label>
 
@@ -27,7 +27,7 @@ const SearchForm = () => {
         # of Results
         <select
           value={numResults}
-          // 👇🏾 call setNumResults with changed value
+          // 👈🏾 call setNumResults with changed value
         >
           {/* 👈🏾 map over `NUM_RESULTS_TIERS` to render `<option>` elements for each tier */}
         </select>
@@ -52,7 +52,7 @@ const App = () => {
   return (
     <main style={{ maxWidth: 500 }}>
       <SearchForm
-      // 👇🏾 call `setFields` with submitted data, adding `lastSubmitted` property.
+      // 👈🏾 call `setFields` with submitted data, adding `lastSubmitted` property.
       // Use `lastSubmitted: Date.now()`
       />
 
