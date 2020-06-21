@@ -88,7 +88,7 @@ Each step in the minishop contains exercises to apply what you just learned. It 
 
 If at any point you get stuck, you can find the answers in the `final/` directory of the step.
 
-- Setup / Logistics / Intro
+- 🛠️ Setup / Logistics / Intro
 - [Step 1 - Props](src/01-props/)
 - [Step 2 - Hooks](src/02-hooks/)
 - 😴 10 minutes
