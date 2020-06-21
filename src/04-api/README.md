@@ -94,7 +94,7 @@ After you're done with the exercise and before jumping to the next step, please 
 
 ## 👉🏾 Next Step
 
-Go to [Quiz](../quiz).
+Go to the [Quiz](../quiz).
 
 ## 📕 Resources
 

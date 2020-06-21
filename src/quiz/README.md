@@ -22,7 +22,7 @@ After you're done with the exercise and before jumping to the end, please fill o
 
 ## 👉🏾 Next Step
 
-Go to [End](../end).
+Go to the [End](../end).
 
 ## ❓ Questions
 

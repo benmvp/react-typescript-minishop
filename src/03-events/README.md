@@ -199,7 +199,7 @@ After you're done with the exercise and before jumping to the next step, please 
 
 ## 👉🏾 Next Step
 
-Go to [Step 4 - APIs & Utilities](../04-apis).
+Go to [Step 4 - APIs & Utilities](../04-api).
 
 ## 📕 Resources
 
