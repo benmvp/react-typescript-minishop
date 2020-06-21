@@ -10,7 +10,7 @@ When dealing with events, whether those defined by form elements or those define
 
 ## ⭐ Concepts
 
-- Providing event handlers to form and form element events
+- Providing type-checked event handlers to form and form element events
 - Defining function props in components
 - Making use of type inference with function callbacks
 

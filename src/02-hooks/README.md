@@ -11,7 +11,7 @@ Hooks are functions that let you "hook into" React state and lifecycle features 
 ## ⭐ Concepts
 
 - Type-checking `useState`, `useEffect`, `useRef` & `useReducer`
-- Type declarations vs. assertions vs. inference
+- Difference between type declarations vs. assertions vs. inference
 
 ## 📝 Learn
 

@@ -2,7 +2,13 @@
   "name": "react-typescript-minishop",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
   "scripts": {
+    "setup": "node scripts/setup.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
