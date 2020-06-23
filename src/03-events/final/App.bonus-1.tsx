@@ -23,7 +23,7 @@ const SearchForm = ({
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form method="POST" onSubmit={handleSubmit}>
       <label>
         Query
         <input

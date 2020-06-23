@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import {
   getResults,
 
-  // 👈🏾 you will need to import the type for `results`
+  // Uncomment this line. It's the type of a result
+  // Result,
 } from './api'
 
 const App = () => {

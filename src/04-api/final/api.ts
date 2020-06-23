@@ -1,5 +1,6 @@
 import { formatUrl } from 'url-lib'
 
+// 👀 this is the type of a result from the API response
 interface ResponseResult {
   id: string
   title: string
@@ -15,6 +16,8 @@ interface ResponseResult {
   }
 }
 
+// 👀 this is the type of a result for the UI
+// it can be imported in the App
 export interface Result {
   id: string
   title: string
@@ -23,6 +26,8 @@ export interface Result {
   previewUrl: string
 }
 
+// takes in an object of type ResponseResult
+// returns an object of type Result
 const mapResponseToUiData = ({
   id,
   title,
@@ -37,6 +42,7 @@ const mapResponseToUiData = ({
   previewUrl: images.preview.mp4,
 })
 
+// 👀 this is the type of the response data to use below
 interface ResponseData {
   data: ResponseResult[]
 }

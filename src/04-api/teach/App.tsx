@@ -26,12 +26,12 @@ const Form = ({ onSubmit }: FormProps) => {
 
   return (
     <form
+      method="POST"
       onSubmit={(e) => {
         e.preventDefault()
 
         onSubmit({ username })
       }}
-      style={{ maxWidth: 500 }}
     >
       <label>
         Enter Github username
@@ -74,13 +74,13 @@ const App = () => {
   const [user, handleSubmit] = useUserSearch()
 
   return (
-    <main>
+    <main style={{ width: 300, margin: '0 auto' }}>
       <Form onSubmit={handleSubmit} />
 
       <hr />
 
       {user && (
-        <div className="card" style={{ width: 300 }}>
+        <div className="card">
           <div className="card-image">
             <a href={user.html_url}>
               <img src={user.avatar_url} alt={user.name} />

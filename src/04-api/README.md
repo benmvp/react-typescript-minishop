@@ -89,7 +89,7 @@ const useUserSearch = (initialUsername?: string) => {
 
 ## 💡 Exercises
 
-Define the types missing in [`api.ts`](./api.ts). There are a lot of `any` types that need to be replaced with real types. Once done, import the type of the `results` state variable in [`App.tsx`](./App.tsx) and replace `any` in the assertion of the type when calling `useState()`.
+Define the types missing in [`api.ts`](./api.ts). There are a lot of `any` types that need to be replaced with explicit types. Once done, import the type of the `results` state variable in [`App.tsx`](./App.tsx) and replace `any` in the assertion of the type when calling `useState()`.
 
 (If you run into trouble with the exercises, you can take a peek at the final [source code](./final/App.tsx).)
 

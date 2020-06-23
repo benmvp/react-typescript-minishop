@@ -35,10 +35,10 @@ When dealing with form and form element handlers you can rely on a special form 
 
 ```ts
 const Form = () => {
-  const [name, setName] = useState(initialName)
+  const [name, setName] = useState('')
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form method="POST" onSubmit={handleSubmit}>
       <label>
         Name
         <input
@@ -78,21 +78,14 @@ Components can define their own "events" by exposing function props. Unlike Reac
 
 ```ts
 interface FormProps {
-  initialName?: string
-  initialLikeReact?: boolean
-
   // `onSubmit` is expected to be a function that takes a single object parameter
   // with 2 properties: `name` & `likeReact`. It will return nothing
   onSubmit: (fields: { name: string; likeReact: boolean }) => void
 }
 
-const Form = ({
-  initialName = '',
-  initialLikeReact = true,
-  onSubmit,
-}: FormProps) => {
-  const [name, setName] = useState(initialName)
-  const [likeReact, setLikeReact] = useState(initialLikeReact)
+const Form = ({ onSubmit }: FormProps) => {
+  const [name, setName] = useState('')
+  const [likeReact, setLikeReact] = useState(true)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -113,8 +106,6 @@ const App = () => {
   return (
     <>
       <Form
-        initialName={fields.name}
-        initialLikeReact={fields.likeReact}
         // `setFields` from `useState` and `onSubmit` have identical signatures
         // so `setFields` can be passed directly as the handler
         onSubmit={setFields}
@@ -167,11 +158,11 @@ const Results = ({ items }: ResultsProps) => {
 
 Display the results of the submitted `<SearchForm />`:
 
-- Add `onChange` handlers to the search query field and the number of results drop down to call their respective state setters
-- Map over the values in `NUM_RESULTS_TIERS` to generate `<option>` elements within the results `<select>`
-- Define the `onSubmit` prop in `SearchFormProps` and use them to define the props for `SearchForm`
-- Call the `onSubmit` prop with `query` & `numResults` when the form is submitted
-- In `App`, call `setFields` with the submitted data, adding in `lastSubmitted: Date.now()`
+1. Add `onChange` handlers to the search query field and the number of results drop down to call their respective state setters
+1. Map over the values in `NUM_RESULTS_TIERS` to generate `<option>` elements within the results `<select>`
+1. Define the `onSubmit` prop in `SearchFormProps` and use them to define the props for `SearchForm`
+1. Call the `onSubmit` prop with `query` & `numResults` when the form is submitted
+1. In `App`, call `setFields` with the submitted data, adding in `lastSubmitted: Date.now()`
 
 (If you run into trouble with the exercises, you can take a peek at the final [source code](./final/App.tsx).)
 

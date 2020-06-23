@@ -135,7 +135,7 @@ const FocusInput = () => {
 }
 ```
 
-Based on the types both `inputEl` & `inputEl.current` can be `null`, so we use [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to conditionally access the properties. And because the ref type is `HTMLInputElement` it has `.focus()` to call.
+The type of `inputEl.current` is `HTMLInputElement | null`, so we use [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to conditionally access the properties. And because the ref type is `HTMLInputElement` it has `.focus()` to call.
 
 > NOTE: Because the type of the ref is `HTMLInputElement`, it can only be set on `<input>` elements
 

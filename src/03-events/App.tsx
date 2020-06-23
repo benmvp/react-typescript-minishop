@@ -3,25 +3,26 @@ import React, { useState } from 'react'
 const NUM_RESULTS_TIERS = [6, 12, 18, 24, 30]
 
 interface SearchFormProps {
-  // 👈🏾 define `onSubmit` function prop properly
+  // 👈🏾 3. define `onSubmit` function prop properly
   // it takes an object w/ `query` & `numResults` properties
 }
 
+// 👇🏾 3. add `SearchFormProps` to `SearchForm`
 const SearchForm = () => {
-  // 👇🏾 Uncomment `setQuery` & `setNumResults` below
+  // 👇🏾 1. uncomment `setQuery` & `setNumResults` below
   const [query /*, setQuery*/] = useState('')
   const [numResults /*, setNumResults*/] = useState(NUM_RESULTS_TIERS[1])
 
-  // 👇🏾 on form submit, pass `query` & `numResults` to `onSubmit` prop
+  // 👇🏾 4. on form submit, pass `query` & `numResults` to `onSubmit` prop
 
   return (
-    <form>
+    <form method="POST">
       <label>
         Query
         <input
           type="search"
           value={query}
-          // 👈🏾 call setQuery with changed value
+          // 👈🏾 1. call setQuery with changed value
         />
       </label>
 
@@ -29,9 +30,9 @@ const SearchForm = () => {
         # of Results
         <select
           value={numResults}
-          // 👈🏾 call setNumResults with changed value
+          // 👈🏾 1. call setNumResults with changed value
         >
-          {/* 👈🏾 map over `NUM_RESULTS_TIERS` to render `<option>` elements for each tier */}
+          {/* 👈🏾 2. map over `NUM_RESULTS_TIERS` to render `<option>` elements for each tier */}
         </select>
       </label>
 
@@ -45,7 +46,7 @@ const SearchForm = () => {
 }
 
 const App = () => {
-  // 👇🏾 Uncomment `setFields` below
+  // 👇🏾 5. uncomment `setFields` below
   const [fields /*, setFields*/] = useState({
     query: '',
     numResults: NUM_RESULTS_TIERS[1],
@@ -55,7 +56,7 @@ const App = () => {
   return (
     <main style={{ maxWidth: 500 }}>
       <SearchForm
-      // 👈🏾 call `setFields` with submitted data, adding `lastSubmitted` property.
+      // 👈🏾 5. call `setFields` with submitted data, adding `lastSubmitted` property.
       // Use `lastSubmitted: Date.now()`
       />
 

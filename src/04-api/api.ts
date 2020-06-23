@@ -1,8 +1,11 @@
 import { formatUrl } from 'url-lib'
 
+// 👀 this is the type of a result from the API response
 interface ResponseResult {
-  // 👈🏾 define the other properties returned by the API that are needed
-
+  id: string
+  title: string
+  url: string
+  rating: string
   images: {
     preview: {
       height: string
@@ -13,8 +16,14 @@ interface ResponseResult {
   }
 }
 
+// 👀 this is the type of a result for the UI
+// it can be imported in the App
 export interface Result {
-  // 👈🏾 define all of the properties expected
+  id: string
+  title: string
+  url: string
+  rating: string
+  previewUrl: string
 }
 
 // takes in an object of type ResponseResult
@@ -49,7 +58,8 @@ export const getResults = async (query = '') => {
   const data = await resp.json()
 
   // add an assertion for the type
-  // of the response data 👇🏾
+  // of the response data
+  // i.e. `data as X` 👇🏾
   const responseData = data
 
   const results = responseData.data.map(mapResponseToUiData)

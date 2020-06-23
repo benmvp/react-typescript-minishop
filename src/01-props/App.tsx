@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ITEMS } from './data'
 
-const ResultsItem = ({ id, title, url, rating, previewUrl }) => {
+// replace `any` w/ TypeScript interface props definition 👇🏾
+const ResultsItem = ({ id, title, url, rating, previewUrl }: any) => {
   return (
     <section
       key={id}
@@ -13,7 +14,7 @@ const ResultsItem = ({ id, title, url, rating, previewUrl }) => {
         marginRight: '16px',
       }}
     >
-      <video src={previewUrl} alt={title} loop autoPlay />
+      <video src={previewUrl} loop autoPlay />
       <section className="card-section">
         <h5>
           <a href={url} target="_blank" rel="noopener noreferrer">
@@ -34,14 +35,19 @@ ResultsItem.propTypes = {
   rating: PropTypes.oneOf(['G', 'PG', 'PG-13', 'R']),
   previewUrl: PropTypes.string.isRequired,
 }
+
+// 👇🏾 convert to TypeScript default props
 ResultsItem.defaultProps = {
   rating: undefined,
 }
 
-const Results = ({ items }) => {
+// replace `any`  w/ TS props 👇🏾
+const Results = ({ items }: any) => {
   return items.length === 0 ? null : (
     <section className="callout primary">
-      {items.map((item) => (
+      {items.map((
+        item: any, // 👈🏾 remove `any` when TS props are in place!
+      ) => (
         <ResultsItem
           key={item.id}
           id={item.id}
@@ -68,7 +74,8 @@ Results.propTypes = {
   ).isRequired,
 }
 
-const App = ({ numItems }) => {
+// replace `any`  w/ TS props 👇🏾
+const App = ({ numItems }: any) => {
   const items = ITEMS.slice(0, numItems)
 
   return (
@@ -84,6 +91,8 @@ const App = ({ numItems }) => {
 App.propTypes = {
   numItems: PropTypes.number,
 }
+
+// 👇🏾 convert to TypeScript default props
 App.defaultProps = {
   numItems: 10,
 }

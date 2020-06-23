@@ -17,7 +17,7 @@ const SearchForm = ({ onSubmit }: SearchFormProps) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form method="POST" onSubmit={handleSubmit}>
       <label>
         Query
         <input

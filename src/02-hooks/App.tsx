@@ -17,7 +17,6 @@ const App = () => {
   // Ex 3. - Convert `offsetLeft` into another state variable.
   // Retrieve the `offsetLeft` of the <image> element using `useRef` + `useEffect` every time `x` changes
   // ex: imageRef.current?.offsetLeft
-  //
   const offsetLeft = 0
 
   return (

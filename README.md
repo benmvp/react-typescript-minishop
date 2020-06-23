@@ -17,7 +17,7 @@ In order to maximize our time _during_ the minishop, please complete the followi
 - [ ] Set up the project (follow [setup instructions](#system-requirements) below)
 - [ ] Install and run [Zoom](https://zoom.us/) on the computer you'll be developing with
 - [ ] Install React Developer Tools for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) (recommended) or [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/)
-- [ ] Install a JSX-friendly code editor, such as [Visual Studio Code](https://code.visualstudio.com/)
+- [ ] Install a TypeScript- and JSX-friendly code editor, such as [Visual Studio Code](https://code.visualstudio.com/)
 - [ ] Brush up on modern [ES.next](http://www.benmvp.com/learning-es6-series/) features, if they are unfamiliar to you
 - [ ] Have experience building React applications using hooks
 
@@ -84,7 +84,7 @@ Hiya! 👋🏾 My name is Ben Ilegbodu. 😄
 
 ### 🕘 Schedule
 
-Each step in the minishop contains exercises to apply what you just learned. It won't be adding types to existing code, but writing new code using TypeScript. There are also bonuses if you've got extra time.
+Each step in the minishop contains exercises to apply what you just learned. It will be more than adding types to existing code. You will be writing new code using TypeScript. There are also bonuses if you've got extra time. The exercises are intended to be **a lot**, so don't worry if you don't finish them all.
 
 If at any point you get stuck, you can find the answers in the `final/` directory of the step.
 
@@ -128,7 +128,7 @@ Here is what you'll come away knowing at the end of the minishop...
 
 ## 🧠 Elaboration & Feedback
 
-Each step has an Elaboration & Feedback form link at the end. After you're done with the exercise and before jumping to the next step, please take a few minutes to fill that out to solidify your learning.
+Each step has an Elaboration & Feedback form link at the end. After you're done with the exercise and before jumping to the next step, please take a few minutes to fill out the form to **solidify your learning**.
 
 At the end of the minishop, I would greatly appreciate your overall feedback. [Share your minishop feedback](https://bit.ly/ts-react-ms-feedback).
 

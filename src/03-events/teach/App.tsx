@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
 
 interface FormProps {
-  initialName?: string
-  initialLikeReact?: boolean
   onSubmit: (fields: { name: string; likeReact: boolean }) => void
 }
 
-const Form = ({
-  initialName = '',
-  initialLikeReact = true,
-  onSubmit,
-}: FormProps) => {
-  const [name, setName] = useState(initialName)
-  const [likeReact, setLikeReact] = useState(initialLikeReact)
+const Form = ({ onSubmit }: FormProps) => {
+  const [name, setName] = useState('')
+  const [likeReact, setLikeReact] = useState(true)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -21,7 +15,7 @@ const Form = ({
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: 500 }}>
+    <form method="POST" onSubmit={handleSubmit} style={{ maxWidth: 500 }}>
       <label>
         Name
         <input
@@ -53,9 +47,10 @@ const Form = ({
 
 const App = () => {
   const [fields, setFields] = useState({ name: '', likeReact: false })
+
   return (
     <>
-      <Form initialName="Ben" initialLikeReact onSubmit={setFields} />
+      <Form onSubmit={setFields} />
 
       <dl>
         <dt>Name</dt>
