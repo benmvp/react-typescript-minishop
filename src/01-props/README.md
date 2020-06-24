@@ -134,7 +134,7 @@ const App = (props: Props): JSX.Element => {
 
 ## 💡 Exercises
 
-Rename [`App.js`](./App.js) into `App.tsx`, converting the `propTypes` and `defaultProps` into TypeScript `interface` definitions.
+In [`App.tsx`](./App.tsx), convert the `propTypes` and `defaultProps` into TypeScript `interface` definitions.
 
 (If you run into trouble with the exercises, you can take a peek at the final [source code](./final/App.tsx).)
 
@@ -187,6 +187,7 @@ Go to [Step 2 - Hooks](../02-hooks).
 - [TypeScript Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
 - [React Prop Types with TypeScript](https://www.benmvp.com/blog/react-prop-types-with-typescript/)
 - [React-specific TypeScript types](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/react_prop_type_example)
+- [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped)
 - [`react/prop-types` ESLint rule](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md)
 
 ## ❓ Questions

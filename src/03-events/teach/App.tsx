@@ -15,7 +15,7 @@ const Form = ({ onSubmit }: FormProps) => {
   }
 
   return (
-    <form method="POST" onSubmit={handleSubmit} style={{ maxWidth: 500 }}>
+    <form method="POST" onSubmit={handleSubmit}>
       <label>
         Name
         <input
@@ -49,7 +49,7 @@ const App = () => {
   const [fields, setFields] = useState({ name: '', likeReact: false })
 
   return (
-    <>
+    <div style={{ maxWidth: 500, margin: '0 auto' }}>
       <Form onSubmit={setFields} />
 
       <dl>
@@ -59,7 +59,7 @@ const App = () => {
         <dt>Like React</dt>
         <dd>{fields.likeReact ? 'Yes' : 'No'}</dd>
       </dl>
-    </>
+    </div>
   )
 }
 

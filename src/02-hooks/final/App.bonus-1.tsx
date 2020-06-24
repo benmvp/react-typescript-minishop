@@ -10,7 +10,7 @@ const App = () => {
   const [x, setX] = useState(() =>
     parseInt(window.localStorage.getItem('x') || '50'),
   )
-  const [dir, setDir] = useState<Direction>(
+  const [dir, setDir] = useState(
     (window.localStorage.getItem('dir') || 'right') as Direction,
   )
 
