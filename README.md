@@ -108,7 +108,7 @@ If at any point you get stuck, you can find the answers in the `final/` director
 - Keep your **video on** (if possible) to make it feel more human and lively
 - Keep your **microphone muted** unless your talking to avoid background noise distractions
 - Answer each other's questions in the chat
-- Use breakout rooms to pair
+- Use breakout rooms to pair, if necessary
 
 ### ⭐ Concepts
 
