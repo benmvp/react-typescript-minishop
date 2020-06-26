@@ -255,6 +255,7 @@ Go to [Step 3 - Events & Callbacks](../03-events).
 - [Type assertions](https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions)
 - [TypeScript discriminated unions](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions)
 - [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
 - [Foundation Buttons](https://get.foundation/sites/docs/button.html)
 
 ## ❓ Questions

@@ -156,7 +156,7 @@ const Results = ({ items }: ResultsProps) => {
 
 ## 💡 Exercises
 
-Display the results of the submitted `<SearchForm />`:
+In [`App.tsx`](./App.tsx), Display the results of the submitted `<SearchForm />`:
 
 1. Add `onChange` handlers to the search query field and the number of results drop down to call their respective state setters
 1. Map over the values in `NUM_RESULTS_TIERS` to generate `<option>` elements within the results `<select>`
@@ -215,7 +215,6 @@ Go to [Step 4 - APIs & Utilities](../04-api).
 
 - [Contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing)
 - [React function prop types](https://www.benmvp.com/blog/react-prop-types-with-typescript/#function-types)
-- [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
 
 ## ❓ Questions
 

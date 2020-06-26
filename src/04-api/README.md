@@ -82,7 +82,7 @@ const useUserSearch = (initialUsername?: string) => {
     setUsername(username)
   }
 
-  // use const assert for the current return type
+  // use const assertion for the current return type
   return [user, handleSubmit] as const
 }
 ```
