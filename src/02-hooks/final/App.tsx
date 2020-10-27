@@ -3,18 +3,8 @@ import React, { useState, useEffect, useRef } from 'react'
 type Direction = 'right' | 'left'
 
 const App = () => {
-  const [x, setX] = useState(parseInt(window.localStorage.getItem('x') || '50'))
-  const [dir, setDir] = useState(
-    (window.localStorage.getItem('dir') || 'right') as Direction,
-  )
-
-  useEffect(() => {
-    window.localStorage.setItem('x', x.toString())
-  }, [x])
-  useEffect(() => {
-    window.localStorage.setItem('dir', dir)
-  }, [dir])
-
+  const [x, setX] = useState(50)
+  const [dir, setDir] = useState('right' as Direction)
   const [offsetLeft, setOffsetLeft] = useState(0)
   const imageRef = useRef<HTMLImageElement>(null)
 

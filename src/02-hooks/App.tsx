@@ -6,15 +6,7 @@ const App = () => {
   const x = 50
   const dir = 'right'
 
-  // Ex 2. - Initialize `x` & `dir` state from `localStorage` with `useState`
-  // x = parseInt(window.localStorage.getItem('x') || '50')
-  // dir = window.localStorage.getItem('dir') || 'right'
-
-  // Ex 2. - Store `x` & `dir` into `localStorage` using `useEffect`
-  // window.localStorage.setItem('x', x.toString())
-  // window.localStorage.setItem('dir', dir)
-
-  // Ex 3. - Convert `offsetLeft` into another state variable.
+  // Ex 2. - Convert `offsetLeft` into another state variable.
   // Retrieve the `offsetLeft` of the <image> element using `useRef` + `useEffect` every time `x` changes
   // ex: imageRef.current?.offsetLeft
   const offsetLeft = 0

@@ -1,72 +1,4 @@
-import React, { useState, useEffect, useRef, useReducer } from 'react'
-
-interface AppState {
-  count: number
-  lastDecremented: number
-  lastIncremented: number
-}
-type Action =
-  | { type: 'decrement'; decTime: number }
-  | { type: 'increment'; incTime: number }
-
-const reducer = (state: AppState, action: Action): AppState => {
-  switch (action.type) {
-    case 'decrement': {
-      return {
-        ...state,
-        count: state.count - 1,
-        lastDecremented: action.decTime,
-      }
-    }
-    case 'increment': {
-      return {
-        ...state,
-        count: state.count + 1,
-        lastIncremented: action.incTime,
-      }
-    }
-    default: {
-      throw new Error()
-    }
-  }
-}
-
-interface CounterReducerProps {
-  initialCount?: number
-}
-const CounterReducer = ({ initialCount = 0 }: CounterReducerProps) => {
-  const [state, dispatch] = useReducer(reducer, {
-    count: initialCount,
-    lastDecremented: Date.now(),
-    lastIncremented: Date.now(),
-  })
-
-  return (
-    <div>
-      <p>Count: {state.count}</p>
-      <p>
-        Last Decremented: {new Date(state.lastDecremented).toLocaleTimeString()}
-      </p>
-      <p>
-        Last Incremented: {new Date(state.lastIncremented).toLocaleTimeString()}
-      </p>
-      <button
-        type="button"
-        className="button"
-        onClick={() => dispatch({ type: 'decrement', decTime: Date.now() })}
-      >
-        -
-      </button>
-      <button
-        type="button"
-        className="button"
-        onClick={() => dispatch({ type: 'increment', incTime: Date.now() })}
-      >
-        +
-      </button>
-    </div>
-  )
-}
+import React, { useState, useEffect, useRef } from 'react'
 
 const FocusInput = () => {
   const inputEl = useRef<HTMLInputElement>(null)
@@ -86,19 +18,30 @@ const FocusInput = () => {
   )
 }
 
-interface DelayerProps {
-  time?: number
-}
-const Delayer = ({ time = 1000 }: DelayerProps) => {
+const trackPage = (pageName: string) => Promise.resolve(`tracked ${pageName}`)
+
+const Tracker = () => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      // do something
-    }, time)
+    trackPage('step-2')
+  }, [])
 
-    return () => clearTimeout(timer)
-  }, [time])
+  return <p>Tracked page</p>
+}
 
-  return null
+const Clock = () => {
+  const [time, setTime] = useState(() => new Date())
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setTime(new Date())
+    }, 1000)
+
+    return () => {
+      window.clearInterval(intervalId)
+    }
+  })
+
+  return <p>The time is {time.toLocaleTimeString()}.</p>
 }
 
 type JustifyContent =
@@ -167,13 +110,13 @@ const App = () => (
   <>
     <CounterState />
     <hr />
+    <Clock />
+    <hr />
     <Defined />
     <hr />
-    <Delayer />
+    <Tracker />
     <hr />
     <FocusInput />
-    <hr />
-    <CounterReducer />
   </>
 )
 

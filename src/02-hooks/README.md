@@ -21,7 +21,7 @@ Your app should automatically reset and you should be able to continue on with t
 
 ## ⭐ Concepts
 
-- Type-checking `useState`, `useEffect`, `useRef` & `useReducer`
+- Type-checking `useState`, `useEffect` & `useRef`
 - Difference between type declarations vs. assertions vs. inference
 
 ## 💡 Exercises
@@ -32,11 +32,7 @@ Your app should automatically reset and you should be able to continue on with t
 
 In [`App.tsx`](./App.tsx), convert the static `x` & `dir` variables into state variables using `useState`. The `dir` state can **only** be `'right'` or `'left'`. Toggle the `dir` state when the button is clicked. Increment or decrement the `x` state by `5` depending on the value of `dir`.
 
-### 2. `useEffect`
-
-Store the values of `x` & `dir` in `localStorage` as their values change using `useEffect`. Also, retrieve the `x` & `dir` values from `localStorage` to initialize the respective state variables.
-
-### 3. `useRef`
+### 2. `useRef`
 
 Create a ref using `useRef` for the `<image>` element. Use `useEffect` to retrieve the [`offsetLeft`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft) of the image. Update a new `offsetLeft` state variable every time the `x` state variable changes.
 
@@ -46,15 +42,15 @@ After you're done with the exercise and before jumping to the next step, please 
 
 ## 🤓 Bonus!
 
-### 1. Optimized `useState`
+### 1. Use `localStorage`
 
-Although `useState` only uses the initial value once when it creates the state variable, the initial value _itself_ is calculated on every render. This means that we're calling `parseInt(window.localStorage.getItem('x') || '50')` on every render. We're reading from `localStorage` unnecessarily, creating a potential performance bottleneck.
+Store the values of `x` & `dir` in `localStorage` as their values change using `useEffect`. Also, retrieve the `x` & `dir` values from `localStorage` to initialize the respective state variables.
 
-Using [lazy state initialization](https://reactjs.org/docs/hooks-reference.html#lazy-initial-state), only read from `localStorage` during the initial render.
+### 2. Optimized `useState`
 
-### 2. `useReducer`
+Although `useState` only uses the initial value once when it creates the state variable, the initial value _itself_ is calculated on every render. This means that we're calling `parseInt(window.localStorage.getItem('x') || '50', 10)` on every render. We're reading from `localStorage` unnecessarily, creating a potential performance bottleneck.
 
-Convert the individual `x`, `dir` & `offsetLeft` state variables into a combined state using `useReducer`. Replace the individual calls to update the state variables, with dispatches on the reducer.
+Using [lazy state initialization](https://reactjs.org/docs/hooks-reference.html#lazy-initial-state), only read from `localStorage` during the initial render for `x` & `dir`.
 
 ## 📕 Resources
 
@@ -64,6 +60,7 @@ Convert the individual `x`, `dir` & `offsetLeft` state variables into a combined
 - [TypeScript discriminated unions](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions)
 - [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
+- [Four characters can optimize your React component](https://www.benmvp.com/blog/four-characters-optimize-react-component/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
 - [Foundation Buttons](https://get.foundation/sites/docs/button.html)
 
 ## 👉🏾 Next Step

@@ -117,7 +117,7 @@ Here is what you'll come away knowing at the end of the minishop...
 - TypeScript Syntax (throughout)
 - Declaring props ([Step 1](src/01-props/))
 - Defining default props ([Step 1](src/01-props/))
-- Type-checking `useState`, `useEffect`, `useRef` & `useReducer` ([Step 2](src/02-hooks/))
+- Type-checking `useState`, `useEffect` & `useRef` ([Step 2](src/02-hooks/))
 - Difference between type declarations vs. assertions vs. inference ([Step 2](src/02-hooks/))
 - Defining function props in components [(Step 3](src/03-events/))
 - Making use of type inference with function callbacks [(Step 3](src/03-events/))

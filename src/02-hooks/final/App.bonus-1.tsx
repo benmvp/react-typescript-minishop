@@ -3,13 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 type Direction = 'right' | 'left'
 
 const App = () => {
-  // Pass a callback to `useState` so that the retrieval from `localStorage`
-  // only happens on initial render. The type of `x` is determined by what's
-  // returned by the callback.
-  // https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
-  const [x, setX] = useState(() =>
-    parseInt(window.localStorage.getItem('x') || '50'),
-  )
+  const [x, setX] = useState(parseInt(window.localStorage.getItem('x') || '50'))
   const [dir, setDir] = useState(
     (window.localStorage.getItem('dir') || 'right') as Direction,
   )
