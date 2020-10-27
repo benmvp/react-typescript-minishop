@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react'
 
 const NUM_RESULTS_TIERS = [6, 12, 18, 24, 30]
@@ -9,9 +10,8 @@ interface SearchFormProps {
 
 // 👇🏾 3. add `SearchFormProps` to `SearchForm`
 const SearchForm = () => {
-  // 👇🏾 1. uncomment `setQuery` & `setNumResults` below
-  const [query /*, setQuery*/] = useState('')
-  const [numResults /*, setNumResults*/] = useState(NUM_RESULTS_TIERS[1])
+  const [query, setQuery] = useState('')
+  const [numResults, setNumResults] = useState(NUM_RESULTS_TIERS[1])
 
   // 👇🏾 4. on form submit, pass `query` & `numResults` to `onSubmit` prop
 
@@ -46,8 +46,7 @@ const SearchForm = () => {
 }
 
 const App = () => {
-  // 👇🏾 5. uncomment `setFields` below
-  const [fields /*, setFields*/] = useState({
+  const [fields , setFields] = useState({
     query: '',
     numResults: NUM_RESULTS_TIERS[1],
     lastSubmitted: -1,

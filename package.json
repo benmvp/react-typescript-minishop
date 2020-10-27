@@ -4,7 +4,7 @@
   "private": true,
   "license": "GPL-3.0-only",
   "engines": {
-    "node": ">=10",
+    "node": ">=12",
     "npm": ">=6"
   },
   "scripts": {
@@ -14,7 +14,7 @@
     "test": "react-scripts test",
     "test:coverage": "npm run test -- --watchAll=false",
     "lint": "eslint src --ext .js,.ts,.tsx",
-    "type": "tsc --project . --noEmit",
+    "type": "tsc --noEmit",
     "validate": "npm-run-all --parallel lint type build",
     "eject": "react-scripts eject"
   },
@@ -34,24 +34,24 @@
     ]
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.43",
-    "@types/react": "^16.9.35",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.5",
+    "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "typescript": "^3.7.5",
+    "react-scripts": "4.0.0",
+    "typescript": "^4.0.5",
     "url-lib": "^3.0.3"
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.5",
+    "@types/react-router-dom": "^5.1.6",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.2"
   }
 }

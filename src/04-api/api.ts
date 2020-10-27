@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { formatUrl } from 'url-lib'
 
 // 👀 this is the type of a result from the API response
