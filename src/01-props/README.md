@@ -138,6 +138,10 @@ In [`App.tsx`](./App.tsx), convert the `propTypes` and `defaultProps` into TypeS
 
 (If you run into trouble with the exercises, you can take a peek at the final [source code](./final/App.tsx).)
 
+## 🧠 Elaboration & Feedback
+
+After you're done with the exercise and before jumping to the next step, please fill out the [elaboration & feedback form](https://docs.google.com/forms/d/e/1FAIpQLScRocWvtbrl4XmT5_NRiE8bSK3CMZil-ZQByBAt8lpsurcRmw/viewform?usp=pp_url&entry.1671251225=TypeScript+For+React+Developers+Minishop&entry.1984987236=Step+1+-+Props). It will help seal in what you've learned.
+
 ## 🤓 Bonus!
 
 ### 1. DRY up the types
@@ -172,24 +176,16 @@ App.defaultProps = {
 
 Convert them into TypeScript prop definitions for `App`. Be sure to pay attention to which props are required/optional.
 
-## 🧠 Elaboration & Feedback
-
-After you're done with the exercise and before jumping to the next step, please fill out the [elaboration & feedback form](https://docs.google.com/forms/d/e/1FAIpQLScRocWvtbrl4XmT5_NRiE8bSK3CMZil-ZQByBAt8lpsurcRmw/viewform?usp=pp_url&entry.1671251225=TypeScript+For+React+Developers+Minishop&entry.1984987236=Step+1+-+Props). It will help seal in what you've learned.
-
-## 👉🏾 Next Step
-
-Go to [Step 2 - Hooks](../02-hooks).
-
 ## 📕 Resources
 
 - [Basic TypeScript Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 - [TypeScript Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
 - [TypeScript Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
-- [React Prop Types with TypeScript](https://www.benmvp.com/blog/react-prop-types-with-typescript/)
+- [React Prop Types with TypeScript](https://www.benmvp.com/blog/react-prop-types-with-typescript/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
 - [React-specific TypeScript types](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/react_prop_type_example)
 - [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped)
 - [`react/prop-types` ESLint rule](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md)
 
-## ❓ Questions
+## 👉🏾 Next Step
 
-Got questions after the minishop? Need further clarification? Feel free to post a question in [Ben Ilegbodu's AMA](https://www.benmvp.com/ama/)!
+Go to [Step 2 - Hooks](../02-hooks).

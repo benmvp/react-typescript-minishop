@@ -29,16 +29,12 @@ Some guidance:
 - Use the search form from [Step 3](../03-events), including the bonus to add the ratings filter
 - Use the API and custom hook from [Step 4](../04-api)
 
-Share your working app with me on my [AMA](http://www.benmvp.com/ama/) or on [Twitter](https://twitter.com/benmvp)!
+Share your working app with me on [Twitter](https://twitter.com/benmvp)!
 
 ## 🧠 Elaboration & Feedback
 
 After you're done with the exercise and before jumping to the end, please fill out the [elaboration & feedback form](https://docs.google.com/forms/d/e/1FAIpQLScRocWvtbrl4XmT5_NRiE8bSK3CMZil-ZQByBAt8lpsurcRmw/viewform?usp=pp_url&entry.1671251225=TypeScript+For+React+Developers+Minishop&entry.1984987236=Final+Quiz). It will help seal in what you've learned.
 
-## 👉🏾 Next Step
+## 💲 Minishop discount
 
-Go to the [End](../end).
-
-## ❓ Questions
-
-Got questions after the minishop? Need further clarification? Feel free to post a question in [Ben Ilegbodu's AMA](https://www.benmvp.com/ama/)!
+Hopefully you enjoyed working on the quiz to help you apply everything you learned. As a bonus for completing the quiz, you will receive a one-time **25% discount** to apply to any future minishop. Just send an email to team@benmvp.com before you register for the minishop, and you will receive your a discount code. Congratulations! 🎉

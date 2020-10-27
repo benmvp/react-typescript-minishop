@@ -18,7 +18,7 @@ In order to maximize our time _during_ the minishop, please complete the followi
 - [ ] Install and run [Zoom](https://zoom.us/) on the computer you'll be developing with
 - [ ] Install React Developer Tools for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) (recommended) or [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/)
 - [ ] Install a TypeScript- and JSX-friendly code editor, such as [Visual Studio Code](https://code.visualstudio.com/)
-- [ ] Brush up on modern [ES.next](http://www.benmvp.com/learning-es6-series/) features, if they are unfamiliar to you
+- [ ] Brush up on modern [ES.next](http://www.benmvp.com/learning-es6-series/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop) features, if they are unfamiliar to you
 - [ ] Have experience building React applications using hooks
 
 The more prepared you are for the minishop, the better it will go for you! 👍🏾
@@ -26,7 +26,7 @@ The more prepared you are for the minishop, the better it will go for you! 👍�
 ## System Requirements
 
 - [git](https://git-scm.com/) v2 or higher
-- [Node.js](https://nodejs.org/en/) v10 or higher
+- [Node.js](https://nodejs.org/en/) v12 or higher
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) v6 or higher
 
 All of these must also be available in your `PATH` in order to be run globally. To verify things are set up properly, run:
@@ -37,7 +37,7 @@ node --version
 npm --version
 ```
 
-If your node version is version 9 or lower, you can [install `nvm`](https://github.com/creationix/nvm#install-script) to manage multiple versions of node.
+If your node version is version 11 or lower, you can [install `nvm`](https://github.com/creationix/nvm#install-script) to manage multiple versions of node.
 
 If you have trouble with any of these, learn more about the `PATH` environment variable and how to fix it here for [Windows](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/) or [Mac/Linux](http://stackoverflow.com/a/24322978/971592).
 
@@ -75,11 +75,11 @@ Let's learn about TypeScript in React! ⚛️
 
 Hiya! 👋🏾 My name is Ben Ilegbodu. 😄
 
-- Christian, Husband, Father of 👌🏾
+- Christian, Husband, Father of 3️⃣
 - Pittsburg, California
 - Principal Frontend Engineer at [Stitch Fix](https://www.stitchfix.com/) (and yes [we're hiring](https://www.stitchfix.com/careers/jobs)!)
 - [@benmvp](https://twitter.com/benmvp)
-- [www.benmvp.com](https://www.benmvp.com/)
+- [www.benmvp.com](https://www.benmvp.com/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
 - Go Rockets! 🚀🏀
 
 ### 🕘 Schedule
@@ -101,7 +101,7 @@ If at any point you get stuck, you can find the answers in the `final/` director
 ### ❓ Asking Questions
 
 - Please **interrupt me** and ask questions! Others likely will have the _same question_.
-- However, unrelated questions are better sent to [Twitter](https://twitter.com/benmvp) or [my AMA](http://www.benmvp.com/ama).
+- However, unrelated questions are better sent to [Twitter](https://twitter.com/benmvp).
 
 ### 🖥️ Zoom Hygiene
 
@@ -126,7 +126,7 @@ Here is what you'll come away knowing at the end of the minishop...
 - Type-checking JSON data from `fetch` ([Step 4](src/04-api/))
 - Type-checking custom hooks ([Step 4](src/04-api/))
 
-## 🧠 Elaboration & Feedback
+### 🧠 Elaboration & Feedback
 
 Each step has an Elaboration & Feedback form link at the end. After you're done with the exercise and before jumping to the next step, please take a few minutes to fill out the form to **solidify your learning**.
 
@@ -134,12 +134,12 @@ At the end of the minishop, I would greatly appreciate your overall feedback. [S
 
 ### 🤝 Code of Conduct
 
-All attendees, speakers, sponsors and volunteers at this minishop are required to agree with the [code of conduct](https://www.benmvp.com/minishops/conduct/). Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
-
-### 👉🏾 First Step
-
-Go to [Step 0 - Begin](src/00-begin/).
+All attendees, speakers, sponsors and volunteers at this minishop are required to agree with the [code of conduct](https://www.benmvp.com/minishops/conduct/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop). Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
 
 ## License
 
 All of the minishop material is available for **private, non-commercial use** under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html) license. If you would like to use this minishop to conduct your own minishop, please contact team@benmvp.com.
+
+### 👉🏾 First Step
+
+Go to [Step 0 - Begin](src/00-begin/).
