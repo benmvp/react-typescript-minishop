@@ -9,7 +9,7 @@ const useGiphy = (initialQuery = '') => {
     getResults(query).then(setResults)
   }, [query])
 
-  return [results, query, setQuery] as const
+  return { results, query, setQuery }
 }
 
 export default useGiphy

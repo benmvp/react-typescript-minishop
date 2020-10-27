@@ -2,7 +2,7 @@ import React from 'react'
 import useGiphy from './useGiphy'
 
 const App = () => {
-  const [results, query, setQuery] = useGiphy()
+  const { results, query, setQuery } = useGiphy()
 
   return (
     <main>

@@ -10,10 +10,13 @@ interface User {
   public_gists: number
 }
 
+// `username` is a required parameter
 const getUser = async (username: string): Promise<User> => {
   const res = await fetch(`https://api.github.com/users/${username}`)
   const data = await res.json()
 
+  // assert that the JSON data is a User so that everything
+  // else can be type-safe
   return data as User
 }
 
@@ -51,9 +54,12 @@ const Form = ({ onSubmit }: FormProps) => {
   )
 }
 
+// `initialUsername` is optional because of `?` making its type `string | undefined`
 const useUserSearch = (initialUsername?: string) => {
   const [username, setUsername] = useState(initialUsername)
-  const [user, setUser] = useState(null as User | null)
+
+  // in order to have a type for `user` state we must assert the type to `User | null`
+  const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
     if (username) {
@@ -67,6 +73,7 @@ const useUserSearch = (initialUsername?: string) => {
     setUsername(username)
   }
 
+  // use const assertion for the current return type
   return [user, handleSubmit] as const
 }
 

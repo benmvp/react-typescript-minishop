@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {
   getResults,
 
-  // Uncomment this line. It's the type of a result
+  // 👇🏾 Uncomment this line. It's the type of a result
   // Result,
 } from './api'
 

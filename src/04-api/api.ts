@@ -27,8 +27,8 @@ export interface Result {
   previewUrl: string
 }
 
-// takes in an object of type ResponseResult
-// returns an object of type Result
+// takes in an object of type `ResponseResult`
+// returns an object of type `Result`
 // 👇🏾 replace the `any` types with actual types
 const mapResponseToUiData = ({ id, title, url, images, rating }: any): any => ({
   id,

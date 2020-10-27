@@ -39,7 +39,7 @@ After you're done with the exercise and before jumping to the next step, please 
 
 ### 1. Custom hook
 
-Create a new file called `useGiphy.ts` to contain your new custom hook. Factor out the 2 `useState()` calls and the `useEffect()` call out of [`App.tsx`](./App.tsx) into `useGiphy.ts`. The custom hook should take a single param for the initial query (optional), and return back a 3-element array tuple containing the results and a setter for new query values, and the query itself.
+Create a new file called `useGiphy.ts` to contain your new custom hook. Factor out the 2 `useState()` calls and the `useEffect()` call out of [`App.tsx`](./App.tsx) into `useGiphy.ts`. The custom hook should take a single param for the initial query (optional defaulting to `''`), and return back an object containing the results (`results`) and a setter for new query values (`setQuery`), and the query itself (`query`).
 
 ### 2. Async `useEffect`
 
