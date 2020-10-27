@@ -29,8 +29,8 @@ Your app should automatically reset and you should be able to continue on with t
 
 In [`App.tsx`](./App.tsx), Display the results of the submitted `<SearchForm />`:
 
-1. Add `onChange` handlers to the search query field and the number of results drop down to call their respective state setters
 1. Map over the values in `NUM_RESULTS_TIERS` to generate `<option>` elements within the results `<select>`
+1. Add `onChange` handlers to the search query field and the number of results drop down to call their respective state setters
 1. Define the `onSubmit` prop in `SearchFormProps` and use them to define the props for `SearchForm`
 1. Call the `onSubmit` prop with `query` & `numResults` when the form is submitted
 1. In `App`, call `setFields` with the submitted data, adding in `lastSubmitted: Date.now()`

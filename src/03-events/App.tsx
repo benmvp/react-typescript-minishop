@@ -14,6 +14,7 @@ const SearchForm = () => {
   const [numResults, setNumResults] = useState(NUM_RESULTS_TIERS[1])
 
   // 👇🏾 4. on form submit, pass `query` & `numResults` to `onSubmit` prop
+  // (don't forget to call `e.preventDefault()`)
 
   return (
     <form method="POST">
@@ -22,7 +23,7 @@ const SearchForm = () => {
         <input
           type="search"
           value={query}
-          // 👈🏾 1. call setQuery with changed value
+          // 👈🏾 2. call `setQuery` with changed value
         />
       </label>
 
@@ -30,9 +31,9 @@ const SearchForm = () => {
         # of Results
         <select
           value={numResults}
-          // 👈🏾 1. call setNumResults with changed value
+          // 👈🏾 2. call `setNumResults` with changed value
         >
-          {/* 👈🏾 2. map over `NUM_RESULTS_TIERS` to render `<option>` elements for each tier */}
+          {/* 👈🏾 1. map over `NUM_RESULTS_TIERS` to render `<option>` elements for each tier */}
         </select>
       </label>
 
@@ -46,7 +47,7 @@ const SearchForm = () => {
 }
 
 const App = () => {
-  const [fields , setFields] = useState({
+  const [fields, setFields] = useState({
     query: '',
     numResults: NUM_RESULTS_TIERS[1],
     lastSubmitted: -1,
