@@ -1,13 +1,21 @@
 import React from 'react'
 import { ITEMS, Rating } from '../data'
 
-interface ResultsItemProps {
+interface Item {
   id: string
   title: string
   url: string
   rating?: Rating
   previewUrl: string
 }
+
+// While `ResultsItemProps` & `Item` have the exact sample properties,
+// it's good to separate the data from UI configuration. That way
+// when `ResultsItemProps` adds a bgColor prop, `items` for `ResultsProps`
+// can still reference the data
+interface ResultsItemProps extends Item {
+}
+
 const ResultsItem = ({
   id,
   title,
@@ -39,7 +47,7 @@ const ResultsItem = ({
 }
 
 interface ResultsProps {
-  items: ResultsItemProps[]
+  items: Item[]
 }
 const Results = ({ items }: ResultsProps) => {
   return items.length === 0 ? null : (

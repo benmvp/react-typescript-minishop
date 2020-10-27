@@ -20,14 +20,14 @@ interface Props {
   items?: Item[]
 }
 
-const MyComponent = ({
+const Example = ({
   message,
   count = 5,
   children,
   style,
   ...remainingProps
 }: Props) => {
-  if (!remainingProps) {
+  if (remainingProps.status === 'failed') {
     return null
   }
 
@@ -36,15 +36,16 @@ const MyComponent = ({
       <div>{message}</div>
       <div style={style}>{count}</div>
       {children}
+      <pre>{JSON.stringify(remainingProps, null, 2)}</pre>
     </section>
   )
 }
 
 const App = () => {
   return (
-    <MyComponent style={{ color: 'blue', fontSize: 80 }}>
+    <Example style={{ color: 'blue', fontSize: 80 }} status="success">
       <span>One</span>
-    </MyComponent>
+    </Example>
   )
 }
 
