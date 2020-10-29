@@ -11,7 +11,7 @@ interface User {
 }
 
 // `username` is a required parameter
-const getUser = async (username: string): Promise<User> => {
+const getUserApi = async (username: string): Promise<User> => {
   const res = await fetch(`https://api.github.com/users/${username}`)
   const data = await res.json()
 
@@ -63,7 +63,7 @@ const useUserSearch = (initialUsername?: string) => {
 
   useEffect(() => {
     if (username) {
-      getUser(username).then(setUser)
+      getUserApi(username).then(setUser)
     } else {
       setUser(null)
     }

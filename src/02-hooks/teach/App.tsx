@@ -18,11 +18,12 @@ const FocusInput = () => {
   )
 }
 
-const trackPage = (pageName: string) => Promise.resolve(`tracked ${pageName}`)
+const trackPageApi = (pageName: string) =>
+  Promise.resolve(`tracked ${pageName}`)
 
 const Tracker = () => {
   useEffect(() => {
-    trackPage('step-2')
+    trackPageApi('step-2')
   }, [])
 
   return <p>Tracked page</p>
@@ -91,14 +92,14 @@ const CounterState = ({ initialCount = 0 }: CounterProps) => {
       <button
         type="button"
         className="button"
-        onClick={() => setCount((prevCount) => prevCount - 1)}
+        onClick={() => setCount((curCount) => curCount - 1)}
       >
         -
       </button>
       <button
         type="button"
         className="button"
-        onClick={() => setCount((prevCount) => prevCount + 1)}
+        onClick={() => setCount((curCount) => curCount + 1)}
       >
         +
       </button>
@@ -110,9 +111,9 @@ const App = () => (
   <>
     <CounterState />
     <hr />
-    <Clock />
-    <hr />
     <Defined />
+    <hr />
+    <Clock />
     <hr />
     <Tracker />
     <hr />

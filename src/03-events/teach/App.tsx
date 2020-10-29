@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 interface FormProps {
-  onSubmit: (fields: { name: string; likeReact: boolean }) => void
+  onSubmit?: (fields: { name: string; likeReact: boolean }) => void
 }
 
 const Form = ({ onSubmit }: FormProps) => {
@@ -15,7 +15,9 @@ const Form = ({ onSubmit }: FormProps) => {
     e.preventDefault()
 
     // 👇🏾 `onSubmit` must be called with the correct arguments of the right types
-    onSubmit({ name, likeReact })
+    if (onSubmit) {
+      onSubmit({ name, likeReact })
+    }
   }
 
   return (
