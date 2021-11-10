@@ -4,7 +4,7 @@ type Direction = 'right' | 'left'
 
 const App = () => {
   const [x, setX] = useState(50)
-  const [dir, setDir] = useState('right' as Direction)
+  const [dir, setDir] = useState<Direction>('right')
   const [offsetLeft, setOffsetLeft] = useState(0)
   const imageRef = useRef<HTMLImageElement>(null)
 

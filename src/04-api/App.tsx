@@ -10,7 +10,7 @@ const App = () => {
   const [query, setQuery] = useState('')
 
   // replace `any` with the type of the results 👇🏾
-  const [results, setResults] = useState([] as any[])
+  const [results, setResults] = useState<any[]>([])
 
   useEffect(() => {
     getResults(query).then(setResults)

@@ -31,7 +31,7 @@ In [`App.tsx`](./App.tsx), Display the results of the submitted `<SearchForm />`
 
 1. Map over the values in `NUM_RESULTS_TIERS` to generate `<option>` elements within the results `<select>`
 1. Add `onChange` handlers to the search query field and the number of results drop down to call their respective state setters
-1. Define the `onSubmit` prop in `SearchFormProps` and use them to define the props for `SearchForm`
+1. Define the `onSubmit` prop in `SearchFormProps` and use `SearchFormProps` to define the props for `SearchForm`
 1. Call the `onSubmit` prop with `query` & `numResults` when the form is submitted
 1. In `App`, call `setFields` with the submitted data, adding in `lastSubmitted: Date.now()`
 
@@ -76,12 +76,15 @@ const RATING_FILTERS = [
 <label htmlFor={`rating-${value}`}>{label}</label>
 ```
 
-...add UI for also filtering by rating. The `SearchForm` will need to maintain a `rating` state that it can thing pass when calling the `onSubmit` handler. `App` should display the selected rating using its `label` property.
+...add UI for also filtering by rating. The `SearchForm` will need to maintain a `rating` state that it can then pass when calling the `onSubmit` handler. `App` should display the selected rating using its `label` property.
 
 ## 📕 Resources
 
 - [Contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing)
-- [React function prop types](https://www.benmvp.com/blog/react-prop-types-with-typescript/#function-types)
+- [React function prop types](https://www.benmvp.com/blog/react-prop-types-with-typescript/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop#function-types)
+- [`const` assertions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions)
+- [Use cases for TypeScript const assertions](https://www.benmvp.com/blog/use-cases-typescript-const-assertions/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
+- [Type-checking React useReducer in TypeScript](https://www.benmvp.com/blog/type-checking-react-usereducer-typescript/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
 
 ## 👉🏾 Next Step
 

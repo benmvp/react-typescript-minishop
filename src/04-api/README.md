@@ -52,6 +52,9 @@ Use an `async` function for the call to `getResults()` within `useEffect()` inst
 - [TypeScript functions](https://www.typescriptlang.org/docs/handbook/functions.html)
 - [How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data)
 - [`const` assertions](https://devblogs.microsoft.com/typescript/announcing-typescript-3-4/#const-assertions)
+- [Use cases for TypeScript const assertions](https://www.benmvp.com/blog/use-cases-typescript-const-assertions/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
+- [Quickie fetch JSON helper for TypeScript](https://www.benmvp.com/blog/quickie-fetch-json-helper-for-typescript/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
+- [Successfully using async functions in React useEffect](https://www.benmvp.com/blog/successfully-using-async-functions-useeffect-react/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
 
 ## 👉🏾 Next Step
 

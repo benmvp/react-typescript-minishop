@@ -54,12 +54,18 @@ const Form = ({ onSubmit }: FormProps) => {
   )
 }
 
-// `initialUsername` is optional because of `?` making its type `string | undefined`
+// `initialUsername` is optional because of `?`, making its type
+// `string | undefined`
 const useUserSearch = (initialUsername?: string) => {
   const [username, setUsername] = useState(initialUsername)
 
-  // in order to have a type for `user` state we must assert the type to `User | null`
+  // in order to have a type for `user` state we must assert the type to
+  // `User | null`
   const [user, setUser] = useState<User | null>(null)
+
+  const handleSubmit = ({ username }: { username: string }) => {
+    setUsername(username)
+  }
 
   useEffect(() => {
     if (username) {
@@ -68,10 +74,6 @@ const useUserSearch = (initialUsername?: string) => {
       setUser(null)
     }
   }, [username])
-
-  const handleSubmit = ({ username }: { username: string }) => {
-    setUsername(username)
-  }
 
   // use const assertion for the current return type
   return [user, handleSubmit] as const

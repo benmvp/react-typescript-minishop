@@ -8,7 +8,11 @@ Hopefully, you'll get to apply this learning right away at your job or in a side
 
 ## ❤️ Minishop Feedback
 
-Feedback is a gift. 🎁  Now that you're done with the minishop, I would greatly appreciate your overall feedback on the minishop to help make it even better for the next learners. **[Share your minishop feedback](https://bit.ly/ts-react-ms-feedback)**.
+Feedback is a gift. 🎁 Now that you're done with the minishop, I would greatly appreciate your overall feedback on the minishop to help make it even better for the next learners. **[Share your minishop feedback](https://bit.ly/ts-react-ms-feedback)**.
+
+## 🤓 BenMVP Newsletter
+
+If you enjoyed the minishop, there's still more opportunities to learn! Subscribe to the [BenMVP Newsletter](https://www.benmvp.com/subscribe/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop) and you'll receive a weekly-ish email from me on JavaScript, TypeScript, React, [DivOps](https://www.benmvp.com/blog/what-divops-engineer/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop), and other related web frontend technologies.
 
 ## 👉🏾 Next Step
 

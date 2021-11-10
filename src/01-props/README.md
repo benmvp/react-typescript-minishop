@@ -58,10 +58,10 @@ Convert them into TypeScript prop definitions for `App`. Be sure to pay attentio
 ## 📕 Resources
 
 - [React Prop Types with TypeScript](https://www.benmvp.com/blog/react-prop-types-with-typescript/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
-- [Basic TypeScript Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-- [TypeScript Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
-- [TypeScript Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
-- [React-specific TypeScript types](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/react_prop_type_example)
+- [TypeScript Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+- [TypeScript Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
+- [TypeScript Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html)
+- [React-specific TypeScript types](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example#useful-react-prop-type-examples)
 - [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped)
 - [`react/prop-types` ESLint rule](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md)
 

@@ -18,29 +18,22 @@ const FocusInput = () => {
   )
 }
 
-const trackPageApi = (pageName: string) =>
-  Promise.resolve(`tracked ${pageName}`)
-
-const Tracker = () => {
-  useEffect(() => {
-    trackPageApi('step-2')
-  }, [])
-
-  return <p>Tracked page</p>
+interface ClockProps {
+  tickAmount?: number
 }
 
-const Clock = () => {
+const Clock = ({ tickAmount = 1000 }: ClockProps) => {
   const [time, setTime] = useState(() => new Date())
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setTime(new Date())
-    }, 1000)
+    }, tickAmount)
 
     return () => {
       window.clearInterval(intervalId)
     }
-  })
+  }, [tickAmount])
 
   return <p>The time is {time.toLocaleTimeString()}.</p>
 }
@@ -53,7 +46,7 @@ type JustifyContent =
   | 'space-around'
 
 const Defined = () => {
-  const [justify, setJustify] = useState('space-between' as JustifyContent)
+  const [justify, setJustify] = useState<JustifyContent>('space-between')
 
   return (
     <div
@@ -114,8 +107,6 @@ const App = () => (
     <Defined />
     <hr />
     <Clock />
-    <hr />
-    <Tracker />
     <hr />
     <FocusInput />
   </>

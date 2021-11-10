@@ -7,7 +7,8 @@ const App = () => {
   const dir = 'right'
 
   // Ex 2. - Convert `offsetLeft` into another state variable.
-  // Retrieve the `offsetLeft` of the <image> element using `useRef` + `useEffect` every time `x` changes
+  // Retrieve the `offsetLeft` of the <image> element using `useRef` +
+  // `useEffect` every time `x` changes
   // ex: imageRef.current?.offsetLeft
   const offsetLeft = 0
 

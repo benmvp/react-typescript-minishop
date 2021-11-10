@@ -46,7 +46,7 @@ const main = async () => {
   run(
     'System Validation',
     'Ensuring the correct versions of tools are installed on this computer.',
-    'npx check-engine',
+    'npx check-engine --yes',
   )
 
   run(

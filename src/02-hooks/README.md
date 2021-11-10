@@ -56,8 +56,8 @@ Using [lazy state initialization](https://reactjs.org/docs/hooks-reference.html#
 
 - [Hooks API](https://reactjs.org/docs/hooks-reference.html)
 - [Type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html)
-- [Type assertions](https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions)
-- [TypeScript discriminated unions](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions)
+- [Type assertions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)
+- [TypeScript discriminated unions](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions)
 - [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
 - [Four characters can optimize your React component](https://www.benmvp.com/blog/four-characters-optimize-react-component/?utm_source=github&utm_medium=minishop-code&utm_campaign=react-typescript-minishop)
