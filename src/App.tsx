@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 import Step1 from './01-props/App'
 import Step1Teach from './01-props/teach/App'
@@ -126,77 +126,38 @@ const Index = () => (
 )
 
 const App = () => (
-  <Router>
-    <Switch>
-      <Route path="/step-1/final/bonus-1">
-        <Step1FinalBonus1 />
-      </Route>
-      <Route path="/step-1/final/bonus-2">
-        <Step1FinalBonus2>some children</Step1FinalBonus2>
-      </Route>
-      <Route path="/step-1/final">
-        <Step1Final />
-      </Route>
-      <Route path="/step-1/teach">
-        <Step1Teach />
-      </Route>
-      <Route path="/step-1">
-        <Step1 />
-      </Route>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Index />} />
 
-      <Route path="/step-2/final/bonus-1">
-        <Step2FinalBonus1 />
-      </Route>
-      <Route path="/step-2/final/bonus-2">
-        <Step2FinalBonus2 />
-      </Route>
-      <Route path="/step-2/final">
-        <Step2Final />
-      </Route>
-      <Route path="/step-2/teach">
-        <Step2Teach />
-      </Route>
-      <Route path="/step-2">
-        <Step2 />
-      </Route>
+      <Route path="/step-1" element={<Step1 />} />
+      <Route path="/step-1/teach" element={<Step1Teach />} />
+      <Route path="/step-1/final" element={<Step1Final />} />
+      <Route path="/step-1/final/bonus-1" element={<Step1FinalBonus1 />} />
+      <Route
+        path="/step-1/final/bonus-2"
+        element={<Step1FinalBonus2>some children</Step1FinalBonus2>}
+      />
 
-      <Route path="/step-3/final/bonus-1">
-        <Step3FinalBonus1 />
-      </Route>
-      <Route path="/step-3/final/bonus-2">
-        <Step3FinalBonus2 />
-      </Route>
-      <Route path="/step-3/final">
-        <Step3Final />
-      </Route>
-      <Route path="/step-3/teach">
-        <Step3Teach />
-      </Route>
-      <Route path="/step-3">
-        <Step3 />
-      </Route>
+      <Route path="/step-2" element={<Step2 />} />
+      <Route path="/step-2/teach" element={<Step2Teach />} />
+      <Route path="/step-2/final" element={<Step2Final />} />
+      <Route path="/step-2/final/bonus-1" element={<Step2FinalBonus1 />} />
+      <Route path="/step-2/final/bonus-2" element={<Step2FinalBonus2 />} />
 
-      <Route path="/step-4/final/bonus-1">
-        <Step4FinalBonus1 />
-      </Route>
-      <Route path="/step-4/final/bonus-2">
-        <Step4FinalBonus2 />
-      </Route>
-      <Route path="/step-4/final">
-        <Step4Final />
-      </Route>
-      <Route path="/step-4/teach">
-        <Step4Teach />
-      </Route>
-      <Route path="/step-4">
-        <Step4 />
-      </Route>
+      <Route path="/step-3" element={<Step3 />} />
+      <Route path="/step-3/teach" element={<Step3Teach />} />
+      <Route path="/step-3/final" element={<Step3Final />} />
+      <Route path="/step-3/final/bonus-1" element={<Step3FinalBonus1 />} />
+      <Route path="/step-3/final/bonus-2" element={<Step3FinalBonus2 />} />
 
-      <Route path="/">
-        <Index />
-      </Route>
-    </Switch>
-  </Router>
+      <Route path="/step-4" element={<Step4 />} />
+      <Route path="/step-4/teach" element={<Step4Teach />} />
+      <Route path="/step-4/final" element={<Step4Final />} />
+      <Route path="/step-4/final/bonus-1" element={<Step4FinalBonus1 />} />
+      <Route path="/step-4/final/bonus-2" element={<Step4FinalBonus2 />} />
+    </Routes>
+  </BrowserRouter>
 )
 
 export default App
