@@ -54,9 +54,7 @@ const Form = ({ onSubmit }: FormProps) => {
   )
 }
 
-// `initialUsername` is optional because of `?`, making its type
-// `string | undefined`
-const useUserSearch = (initialUsername?: string) => {
+const useUserSearch = (initialUsername = '') => {
   const [username, setUsername] = useState(initialUsername)
 
   // in order to have a type for `user` state we must assert the type to

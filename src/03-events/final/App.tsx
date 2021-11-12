@@ -60,8 +60,8 @@ const App = () => {
   return (
     <main style={{ maxWidth: 500 }}>
       <SearchForm
-        onSubmit={(fields) =>
-          setFields({ ...fields, lastSubmitted: Date.now() })
+        onSubmit={(newFields) =>
+          setFields({ ...newFields, lastSubmitted: Date.now() })
         }
       />
 

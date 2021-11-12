@@ -3,7 +3,7 @@ import { getResults, Result } from './api'
 
 const App = () => {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState([] as Result[])
+  const [results, setResults] = useState<Result[]>([])
 
   useEffect(() => {
     getResults(query).then(setResults)
