@@ -42,7 +42,7 @@
     "url-lib": "^3.0.3"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.2",
